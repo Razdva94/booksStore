@@ -21,10 +21,22 @@ export default function BooksPage() {
         
         <div className="mb-8 space-y-6">
           <div className="glass-effect gothic-border rounded-lg p-6">
-            <BookSearch />
+            <Suspense fallback={
+              <div className="flex items-center justify-center py-4">
+                <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            }>
+              <BookSearch />
+            </Suspense>
           </div>
           <div className="glass-effect gothic-border rounded-lg p-6">
-            <LanguageFilters />
+            <Suspense fallback={
+              <div className="flex items-center justify-center py-4">
+                <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            }>
+              <LanguageFilters />
+            </Suspense>
           </div>
         </div>
 
